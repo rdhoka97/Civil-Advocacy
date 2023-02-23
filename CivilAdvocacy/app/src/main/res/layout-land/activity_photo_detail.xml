@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/P_Constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Model.PhotoDetailActivity">
+
+    <TextView
+        android:id="@+id/P_Address"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:background="@color/purple_700"
+        android:gravity="center"
+        android:text="City"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/P_Post"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Post"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/P_Image"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/P_Address" />
+
+    <TextView
+        android:id="@+id/P_Name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Name"
+        android:textColor="@color/white"
+        android:textSize="23dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/P_Image"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/P_Post" />
+
+    <ImageView
+        android:id="@+id/P_Image"
+        android:layout_width="250dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/P_Address"
+        app:srcCompat="@drawable/placeholder" />
+
+    <ImageView
+        android:id="@+id/P_Logo"
+        android:layout_width="0dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/P_Image"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/P_Name"
+        app:srcCompat="@drawable/dem_logo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

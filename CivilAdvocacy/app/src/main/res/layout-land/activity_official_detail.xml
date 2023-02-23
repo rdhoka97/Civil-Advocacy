@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".Model.OfficialDetailActivity">
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@color/purple_700"
+            android:gravity="center"
+            android:text="Location"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/position"
+            android:layout_width="0dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="Position"
+            android:textColor="@color/white"
+            android:textSize="23dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/location" />
+
+        <TextView
+            android:id="@+id/PersonName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="PersonName"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/position" />
+
+        <TextView
+            android:id="@+id/PartyName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="PartyName"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/position"
+            app:layout_constraintTop_toBottomOf="@+id/location" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="280dp"
+            android:layout_marginTop="20dp"
+            android:onClick="photoDetail"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.966"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PartyName"
+            app:srcCompat="@drawable/placeholder" />
+
+        <ImageView
+            android:id="@+id/partyImg"
+            android:layout_width="65dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="250dp"
+            android:onClick="Logo"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:srcCompat="@android:drawable/divider_horizontal_dark" />
+
+        <TextView
+            android:id="@+id/labelAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:gravity="left"
+            android:text="Address :"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/PersonName" />
+
+        <TextView
+            android:id="@+id/personAddress"
+            android:layout_width="337dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="242dp"
+            android:autoLink="map"
+            android:gravity="left"
+            android:inputType="textMultiLine"
+            android:onClick="LocationClick"
+            android:text="PersonAddress"
+            android:textColor="@color/white"
+            android:textColorLink="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.022"
+            app:layout_constraintStart_toEndOf="@+id/labelAddress"
+            app:layout_constraintTop_toBottomOf="@+id/PersonName" />
+
+        <TextView
+            android:id="@+id/labelPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="18dp"
+            android:gravity="left"
+            android:text="Phone :"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelAddress" />
+
+        <TextView
+            android:id="@+id/PersonalPhoneNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="12dp"
+            android:autoLink="phone"
+            android:gravity="left"
+            android:text="PersonalPhoneNumber"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/labelPhone"
+            app:layout_constraintTop_toBottomOf="@+id/personAddress" />
+
+        <TextView
+            android:id="@+id/labelWebsite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:gravity="left"
+            android:text="Website :"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelEmail" />
+
+        <TextView
+            android:id="@+id/personalWebsite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:autoLink="web"
+            android:gravity="left"
+            android:text="Personal Website"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/labelWebsite"
+            app:layout_constraintTop_toBottomOf="@+id/PersonalEmail" />
+
+        <ImageView
+            android:id="@+id/facebook"
+            android:layout_width="60dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="25dp"
+            android:onClick="facebookClick"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelWebsite"
+            app:srcCompat="@android:drawable/divider_horizontal_dark" />
+
+        <ImageView
+            android:id="@+id/twitter"
+            android:layout_width="60dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="28dp"
+            android:onClick="twitterClick"
+            app:layout_constraintStart_toEndOf="@+id/facebook"
+            app:layout_constraintTop_toBottomOf="@+id/personalWebsite"
+            app:srcCompat="@android:drawable/divider_horizontal_dark" />
+
+        <ImageView
+            android:id="@+id/youtube"
+            android:layout_width="60dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="28dp"
+            android:onClick="youtubeClick"
+            app:layout_constraintStart_toEndOf="@+id/twitter"
+            app:layout_constraintTop_toBottomOf="@+id/personalWebsite"
+            app:srcCompat="@android:drawable/divider_horizontal_dark" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelWebsite" />
+
+        <TextView
+            android:id="@+id/labelEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="16dp"
+            android:gravity="left"
+            android:text="Email :"
+            android:textColor="@color/white"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/labelPhone" />
+
+        <TextView
+            android:id="@+id/PersonalEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:autoLink="email"
+            android:gravity="left"
+            android:text="Email"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/labelEmail"
+            app:layout_constraintTop_toBottomOf="@+id/PersonalPhoneNo" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
